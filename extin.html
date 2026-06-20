@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Paga Tu Deuda</title>
+<meta name="description" content="Consulta de deudas, facturas y asesoría personalizada.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;700;800&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<style>
+:root{
+--bg:#050505;--card:#111111;--salmon:#E76F51;--salmon2:#FF8A65;--white:#fff;
+}
+*{margin:0;padding:0;box-sizing:border-box;scroll-behavior:smooth}
+body{font-family:Inter,sans-serif;background:var(--bg);color:#fff}
+body:before{
+content:"";position:fixed;inset:0;
+background:
+radial-gradient(circle at top left,rgba(255,138,101,.2),transparent 35%),
+radial-gradient(circle at bottom right,rgba(231,111,81,.2),transparent 35%);
+pointer-events:none}
+.header{position:fixed;top:0;width:100%;height:80px;display:flex;justify-content:space-between;align-items:center;padding:0 40px;background:rgba(0,0,0,.75);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,138,101,.2);z-index:99}
+.logo{font-family:Orbitron,sans-serif;font-size:28px;font-weight:800}
+.logo span{color:var(--salmon2)}
+.menu a{color:#fff;text-decoration:none;margin:0 14px}
+.btn{padding:14px 26px;border-radius:50px;text-decoration:none;font-weight:700}
+.primary{background:linear-gradient(135deg,var(--salmon),var(--salmon2));color:#fff}
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 8%}
+.hero-content{display:grid;grid-template-columns:1.3fr .7fr;gap:40px;width:100%}
+h1{font-family:Orbitron,sans-serif;font-size:4.5rem;line-height:1.05}
+h1 span{color:var(--salmon2);text-shadow:0 0 20px rgba(255,138,101,.8)}
+.hero p{margin:25px 0;font-size:1.15rem;color:#ddd}
+.stats,.cards{display:grid;gap:20px}
+.stat,.card,.form-box{background:rgba(255,255,255,.04);border:1px solid rgba(255,138,101,.18);backdrop-filter:blur(12px);border-radius:24px}
+.stat{padding:25px;text-align:center}
+.stat h2{color:var(--salmon2)}
+section{padding:90px 8%}
+.title{text-align:center;font-family:Orbitron,sans-serif;margin-bottom:40px}
+.cards{grid-template-columns:repeat(auto-fit,minmax(230px,1fr))}
+.card{padding:30px;text-align:center;transition:.3s}
+.card:hover{transform:translateY(-8px)}
+.card i{font-size:42px;color:var(--salmon2);margin-bottom:15px}
+.form-box{max-width:700px;margin:auto;padding:35px}
+input,textarea{width:100%;padding:14px;margin:8px 0;background:#0d0d0d;border:1px solid #333;color:#fff;border-radius:12px}
+button{width:100%;padding:15px;border:none;border-radius:12px;background:linear-gradient(135deg,var(--salmon),var(--salmon2));color:#fff;font-weight:700;cursor:pointer}
+.cta{text-align:center;background:linear-gradient(135deg,#111,#1a1a1a)}
+footer{text-align:center;padding:40px;background:#090909}
+.float{position:fixed;right:25px;bottom:25px;width:65px;height:65px;border-radius:50%;background:#25D366;color:#fff;display:flex;align-items:center;justify-content:center;text-decoration:none;font-size:30px}
+@media(max-width:900px){
+.hero-content{grid-template-columns:1fr}
+h1{font-size:2.8rem}
+.menu{display:none}
+}
+</style>
+</head>
+<body>
+
+<header class="header">
+<div class="logo">Deuda<span>Gas</span></div>
+<nav class="menu">
+<a href="#beneficios">Beneficios</a>
+<a href="#servicios">Servicios</a>
+<a href="#consulta">Consulta</a>
+</nav>
+<a class="btn primary" href="https://wa.me/573150978792">WhatsApp</a>
+</header>
+
+<section class="hero">
+<div class="hero-content">
+<div>
+<h1>CONSULTA TU DEUDA Y <span>RECIBE ASESORÍA</span></h1>
+<p>Consulta de deudas, facturas y acompañamiento personalizado para ayudarte a encontrar alternativas de pago y gestión.</p>
+<a class="btn primary" href="#consulta">Consultar Ahora</a>
+</div>
+<div class="stats">
+<div class="stat"><h2>5000+</h2><p>Clientes Atendidos</p></div>
+<div class="stat"><h2>98%</h2><p>Satisfacción</p></div>
+<div class="stat"><h2>24/7</h2><p>Atención</p></div>
+</div>
+</div>
+</section>
+
+<section id="beneficios">
+<h2 class="title">Beneficios</h2>
+<div class="cards">
+<div class="card"><i class="fas fa-search"></i><h3>Consulta Rápida</h3></div>
+<div class="card"><i class="fas fa-percent"></i><h3>Opciones Disponibles</h3></div>
+<div class="card"><i class="fas fa-user-shield"></i><h3>Gestión Segura</h3></div>
+<div class="card"><i class="fas fa-headset"></i><h3>Atención Personalizada</h3></div>
+</div>
+</section>
+
+<section id="servicios">
+<h2 class="title">Servicios</h2>
+<div class="cards">
+<div class="card"><i class="fas fa-file-invoice"></i><h3>Consulta de Deudas</h3></div>
+<div class="card"><i class="fas fa-money-bill-wave"></i><h3>Facturas</h3></div>
+<div class="card"><i class="fas fa-tags"></i><h3>Asesoría</h3></div>
+<div class="card"><i class="fas fa-handshake"></i><h3>Acompañamiento</h3></div>
+</div>
+</section>
+
+<section id="consulta">
+<h2 class="title">Consulta tu Caso</h2>
+<div class="form-box">
+<form id="consultaForm">
+<input id="nombre" placeholder="Nombre completo" required>
+<input id="telefono" placeholder="Número celular" required>
+<input id="contrato" placeholder="Número de contrato">
+<textarea id="mensaje" rows="5" placeholder="Describe tu caso"></textarea>
+<button type="submit">Consultar por WhatsApp</button>
+</form>
+</div>
+</section>
+
+<section class="cta">
+<h2 class="title">¿Necesitas ayuda inmediata?</h2>
+<a class="btn primary" href="https://wa.me/573150978792">Hablar por WhatsApp</a>
+</section>
+
+<footer>
+<h3>DeudaGas</h3>
+<p>WhatsApp: +57 315 097 8792</p>
+</footer>
+
+<a class="float" href="https://wa.me/573150978792"><i class="fab fa-whatsapp"></i></a>
+
+<script>
+document.getElementById('consultaForm').addEventListener('submit',function(e){
+e.preventDefault();
+const texto=`Hola, deseo consultar mi caso.%0A%0ANombre: ${nombre.value}%0ATeléfono: ${telefono.value}%0AContrato: ${contrato.value}%0AMensaje: ${mensaje.value}`;
+window.open(`https://wa.me/573150978792?text=${texto}`,'_blank');
+});
+</script>
+</body>
+</html>
